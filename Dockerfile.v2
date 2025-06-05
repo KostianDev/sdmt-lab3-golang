@@ -12,6 +12,8 @@ FROM scratch
 
 COPY --from=builder /app/fizzbuzz /fizzbuzz
 
+COPY --from=builder /app/templates /templates
+
 EXPOSE 8080
 
 CMD ["/fizzbuzz", "serve"]
